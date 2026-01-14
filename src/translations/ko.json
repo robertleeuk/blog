@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "홈",
+    "blog": "블로그",
+    "about": "소개"
+  },
+  "common": {
+    "readMore": "더 읽기",
+    "publishedOn": "게시일",
+    "tags": "태그",
+    "backToList": "목록으로",
+    "noPost": "포스트가 없습니다."
+  },
+  "home": {
+    "title": "YAN SO",
+    "description": "기술 관련 글과 커리어 활동을 아카이빙하기 위한 공간입니다."
+  },
+  "blog": {
+    "title": "블로그",
+    "description": "기술 관련 글과 커리어 활동을 아카이빙하기 위한 공간입니다.",
+    "noPost": "아직 포스트가 없습니다."
+  },
+  "footer": {
+    "copyright": "© {year} YANBERT. All rights reserved."
+  }
+}

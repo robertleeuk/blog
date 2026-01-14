@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "common": {
+    "readMore": "Read more",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "backToList": "Back to list",
+    "noPost": "No posts yet."
+  },
+  "home": {
+    "title": "YAN SO",
+    "description": "A space for archiving technical articles and career activities."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "A space for archiving technical articles and career activities.",
+    "noPost": "No posts yet."
+  },
+  "footer": {
+    "copyright": "© {year} YANBERT. All rights reserved."
+  }
+}
