@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YAN SO's Blog",
+  title: "YANSO's Blog",
   description: "기술 관련 글과 커리어 활동을 아카이빙하기 위한 공간입니다.",
 };
 
