@@ -154,7 +154,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             </blockquote>
           ),
           // 이미지
-          img: ({ src, alt, ...props }) => {
+          img: ({ src, alt }) => {
             if (!src || typeof src !== 'string') return null;
             return (
               <div className="relative w-full h-auto my-8 rounded-lg overflow-hidden">
