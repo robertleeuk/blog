@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "YANSO's Blog",
-  description: "기술 관련 글과 커리어 활동을 아카이빙하기 위한 공간입니다.",
+  description: "기술 관련 글과 좋아하는 활동을 아카이빙하기 위한 공간입니다.",
 };
 
 export default function RootLayout({

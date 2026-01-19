@@ -157,7 +157,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           img: ({ src, alt }) => {
             if (!src || typeof src !== 'string') return null;
             return (
-              <div className="relative w-full h-auto my-8 rounded-lg overflow-hidden">
+              <span className="block relative w-full h-auto my-8 rounded-lg overflow-hidden">
                 <Image
                   src={src}
                   alt={alt ? String(alt) : '이미지'}
@@ -166,7 +166,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
                   className="w-full h-auto"
                   loading="lazy"
                 />
-              </div>
+              </span>
             );
           },
           // 테이블

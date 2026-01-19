@@ -13,11 +13,11 @@
   },
   "home": {
     "title": "YAN SO",
-    "description": "A space for archiving technical articles and career activities."
+    "description": "A space for archiving technical articles and favorite activities."
   },
   "blog": {
     "title": "Blog",
-    "description": "A space for archiving technical articles and career activities.",
+    "description": "A space for archiving technical articles and favorite activities.",
     "noPost": "No posts yet."
   },
   "footer": {
