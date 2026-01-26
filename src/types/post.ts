@@ -10,7 +10,7 @@ export interface PostFrontmatter {
   image?: string;
   locale: Locale;
   slug: string;
-  visible?: boolean;
+  draft?: boolean;
 }
 
 export interface Post {
@@ -27,5 +27,5 @@ export interface PostMeta {
   image?: string;
   slug: string;
   locale: Locale;
-  visible?: boolean;
+  draft?: boolean;
 }

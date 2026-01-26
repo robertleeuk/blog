@@ -56,15 +56,15 @@ export function getAllPosts(locale: Locale): PostMeta[] {
       image: frontmatter.image,
       slug: frontmatter.slug,
       locale: frontmatter.locale,
-      visible: frontmatter.visible,
+      draft: frontmatter.draft,
     };
   });
   
-  // visible이 false인 포스트 필터링 (기본값: true)
-  const visiblePosts = posts.filter(post => post.visible !== false);
+  // draft가 true인 포스트 필터링 (기본값: false)
+  const publishedPosts = posts.filter(post => post.draft !== true);
   
   // 날짜 기준 내림차순 정렬
-  return visiblePosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return publishedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 // slug로 특정 포스트 가져오기
