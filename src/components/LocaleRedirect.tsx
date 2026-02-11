@@ -9,7 +9,17 @@ export default function LocaleRedirect() {
   
   useEffect(() => {
     const locale = getInitialLocale();
-    router.replace(`/${locale}/blog`);
+    const targetPath = `/${locale}/blog`;
+    
+    // 즉시 리다이렉트 시도
+    router.replace(targetPath);
+    
+    // 폴백: 일정 시간 후에도 리다이렉트되지 않으면 강제 이동
+    const timeout = setTimeout(() => {
+      window.location.href = targetPath;
+    }, 100);
+    
+    return () => clearTimeout(timeout);
   }, [router]);
   
   return (
