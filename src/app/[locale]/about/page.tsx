@@ -17,8 +17,8 @@ export async function generateMetadata({
   const title = locale === 'ko' ? '소개' : 'About';
   const description =
     locale === 'ko'
-      ? 'YAN SO에 대해 알아보세요'
-      : 'Learn about YAN SO';
+      ? 'ROBERT LEE에 대해 알아보세요'
+      : 'Learn about ROBERT LEE';
 
   return generatePageMetadata({
     title,

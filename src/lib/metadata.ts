@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { PostFrontmatter, Locale } from '@/types/post';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://yanlog.yanbert.com';
-const SITE_NAME = "YAN SO's Blog";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://robert.yanbert.com';
+const SITE_NAME = "ROBERT LEE's Blog";
 
 interface GenerateMetadataOptions {
   title: string;

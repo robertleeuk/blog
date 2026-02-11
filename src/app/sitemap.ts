@@ -4,7 +4,7 @@ import { Locale } from '@/types/post';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://yanlog.yanbert.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://robert.yanbert.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales: Locale[] = ['ko', 'en'];
