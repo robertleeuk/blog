@@ -3,9 +3,9 @@ http://robert.yanbert.com
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server(로컬에서 확인하고 싶을 때):
 
-```bash
+```bash 
 npm run dev
 ```
 
