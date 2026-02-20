@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ROBERT LEE's Blog",
-  description: "좋아하는 활동을 아카이빙하기 위한 공간입니다.",
+  description: "Hoc erat in votis; modus agri non ita magnus, hortus ubi et tecto vicinus iugis aquae fons.",
 };
 
 export default function RootLayout({
