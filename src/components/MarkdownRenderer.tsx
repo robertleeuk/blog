@@ -129,13 +129,17 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           // 순서 없는 리스트
           ul: ({ children, ...props }) => (
             <ul className="list-disc pl-6 space-y-2 my-6 text-neutral-800 dark:text-neutral-200" {...props}>
-              {children}
+              {Array.isArray(children) ? children.map((child, index) => (
+                <div key={index}>{child}</div>
+              )) : children}
             </ul>
           ),
           // 순서 있는 리스트
           ol: ({ children, ...props }) => (
             <ol className="list-decimal pl-6 space-y-2 my-6 text-neutral-800 dark:text-neutral-200" {...props}>
-              {children}
+              {Array.isArray(children) ? children.map((child, index) => (
+                <div key={index}>{child}</div>
+              )) : children}
             </ol>
           ),
           // 리스트 아이템
