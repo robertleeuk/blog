@@ -1,17 +1,62 @@
 'use client';
 
+import { useState, useCallback, isValidElement, ReactNode } from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import rehypeSlug from 'rehype-slug';
 import { slugify } from '@/lib/toc';
+import { trackCodeCopied } from '@/lib/analytics';
 
 interface MarkdownRendererProps {
   content: string;
+  postSlug?: string;
 }
 
-export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
+/**
+ * 코드 블록 복사 버튼 컴포넌트
+ */
+function CopyButton({ code, postSlug, language }: { code: string; postSlug?: string; language: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(async () => {
+    await navigator.clipboard.writeText(code);
+    setCopied(true);
+    if (postSlug) {
+      trackCodeCopied({ post_slug: postSlug, language });
+    }
+    setTimeout(() => setCopied(false), 2000);
+  }, [code, postSlug, language]);
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="absolute top-2 right-2 px-2 py-1 text-xs rounded bg-neutral-700 hover:bg-neutral-600 text-neutral-300 transition-colors"
+      aria-label="코드 복사"
+    >
+      {copied ? '복사됨' : '복사'}
+    </button>
+  );
+}
+
+/**
+ * React children에서 텍스트 추출
+ */
+function extractText(node: ReactNode): string {
+  if (typeof node === 'string') return node;
+  if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(extractText).join('');
+  if (isValidElement(node)) {
+    const props = node.props as Record<string, unknown>;
+    if (props.children) {
+      return extractText(props.children as ReactNode);
+    }
+  }
+  return '';
+}
+
+export default function MarkdownRenderer({ content, postSlug }: MarkdownRendererProps) {
   return (
     <div className="markdown-content">
       <ReactMarkdown
@@ -105,15 +150,27 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               </code>
             );
           },
-          // 코드 블록
-          pre: ({ children, ...props }) => (
-            <pre
-              className="bg-neutral-900 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm font-mono my-8 border border-neutral-800"
-              {...props}
-            >
-              {children}
-            </pre>
-          ),
+          // 코드 블록 (복사 버튼 포함)
+          pre: ({ children, ...props }) => {
+            // code 엘리먼트에서 언어와 텍스트 추출
+            const codeText = extractText(children);
+            const codeProps = isValidElement(children) ? (children.props as Record<string, unknown>) : {};
+            const codeClassName = (codeProps.className as string) || '';
+            const langMatch = /language-(\w+)/.exec(codeClassName);
+            const language = langMatch ? langMatch[1] : 'text';
+
+            return (
+              <div className="relative group">
+                <pre
+                  className="bg-neutral-900 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm font-mono my-8 border border-neutral-800"
+                  {...props}
+                >
+                  {children}
+                </pre>
+                <CopyButton code={codeText} postSlug={postSlug} language={language} />
+              </div>
+            );
+          },
           // 링크 - 유일한 컬러 포인트
           a: ({ href, children, ...props }) => (
             <a
@@ -158,17 +215,24 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             </blockquote>
           ),
           // 이미지
-          img: ({ src, alt }) => {
+          img: ({ src, alt, width, height, ...props }) => {
             if (!src || typeof src !== 'string') return null;
+            
+            // width 또는 height 속성이 있으면 고정 크기 사용
+            const hasFixedSize = width !== undefined || height !== undefined;
+            const imgWidth = width !== undefined ? Number(width) : 800;
+            const imgHeight = height !== undefined ? Number(height) : 600;
+            
             return (
-              <span className="block relative w-full h-auto my-8 rounded-lg overflow-hidden">
+              <span className={`block relative my-8 rounded-lg overflow-hidden ${hasFixedSize ? '' : 'w-full'}`}>
                 <Image
                   src={src}
                   alt={alt ? String(alt) : '이미지'}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
+                  width={imgWidth}
+                  height={imgHeight}
+                  className={hasFixedSize ? 'h-auto' : 'w-full h-auto'}
                   loading="lazy"
+                  {...props}
                 />
               </span>
             );

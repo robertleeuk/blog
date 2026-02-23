@@ -22,5 +22,11 @@
   },
   "footer": {
     "copyright": "© {year} YANBERT. All rights reserved."
+  },
+  "rss": {
+    "feed": "RSS Feed",
+    "subscribe": "Subscribe",
+    "mainFeed": "Main Blog Feed",
+    "tagFeed": "{tag} Tag Feed"
   }
 }

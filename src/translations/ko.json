@@ -22,5 +22,11 @@
   },
   "footer": {
     "copyright": "© {year} YANBERT. All rights reserved."
+  },
+  "rss": {
+    "feed": "RSS 피드",
+    "subscribe": "구독하기",
+    "mainFeed": "전체 블로그 피드",
+    "tagFeed": "{tag} 태그 피드"
   }
 }

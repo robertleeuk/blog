@@ -1,0 +1,206 @@
+---
+title: "Introducing Kiro Friends"
+date: "2026-02-17"
+description: "Kiro Friends - Developer personality analysis through Korean folklore characters"
+tags: ["kiro", "developer", "community", "character"]
+locale: "en"
+slug: "kiro-friends-introduction-20260217"
+draft: false
+---
+
+## Background
+
+When preparing for the Kiro Korea User Group, I thought it would be great to have a representative character for the community, just like AWS Korea User Group has [Gurumi](https://github.com/awskrug/awskrug-digital-assets/blob/master/gurumi/gurumi_TP.png). While my design skills were limited to Mac Preview's markup toolbar and Google Slides, I was able to easily create the 'Gatssn Kiro' character (Kiro wearing a traditional Korean hat called gat) using Gemini's image generation model. When I met Jiyeon, who created Kiro keychains for the Kiro launch party merchandise, and showed her the Gatssn Kiro character, she revealed that she had designed 9 additional characters for future merchandise.
+
+On the first day of Korea's long Lunar New Year holiday, I worked with Kiro to match each character with developer work styles and created a service that analyzes developer types through a series of questions. I named the collection of Gatssn Kiro and the 9 additional characters (10 characters in total) 'Kiro Friends'. Below are the key considerations during development and character introductions.
+
+## Key Considerations
+- Questions were designed to be completed within 1-2 minutes, keeping them as short and simple as possible. The quiz consists of 4 style axes: the first 8 questions establish the basic combination of each axis, and the additional 8 questions provide supplementary information to determine the final character.
+- To avoid complexity in question composition and selection logic, the goal was to minimize duplicate combinations, but this was unavoidable with the constraint of 10 characters. (Reducing the number of characters would have simplified the logic, but how could I not use all these adorable characters?)
+- Beyond fun and viral elements on the results page, I included Kiro usage tips tailored to developer tendencies to spark interest in Kiro, and the bottom CTA area provides access to AWS community-related information.
+- The service supports Korean, English, and Japanese, with language-specific links: Korean users see the AWS Summit 2026 Community Track speaker application page, Japanese users see the AWS JAWS Day 2026 registration page, and English users see the AWS Summit 2026 regional schedule page.
+
+## Character Introductions
+
+### 1. Gatssn Kiro (갓쓴키로) - Strategic Architect
+*Gat (갓) = traditional Korean hat worn by scholars, Kiro = the AI assistant*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/gatssn2.webp" alt="Gatssn Kiro" width="150" />
+
+**Character Background**  
+A yangban (scholar-official) ghost wearing a gat, symbolizing knowledge and authority in traditional Korean society. Represents a tendency to value systematic and planned approaches.
+
+**Work Style**  
+A perfectionist architect who won't write a single line of code without proper design
+
+**Strengths**: Ability to visualize the entire system like a bird's-eye view and prevent technical debt through thoughtful design  
+**Cautions**: May delay actual implementation due to over-design, and miss MVP launch timing while pursuing perfect architecture
+
+**Synergy**: Jeoseung Saja | **Tension**: Cheonyeo Gwishin
+
+---
+
+### 2. Chonggak Gwishin (총각귀신) - Flow Master
+*Chonggak (총각) = bachelor, Gwishin (귀신) = ghost*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/chonggak.webp" alt="Chonggak Gwishin" width="150" />
+
+**Character Background**  
+The ghost of a bachelor who died unmarried, representing obsession with a single task while harboring resentment. Symbolizes extreme focus and immersion.
+
+**Work Style**  
+Possesses extreme concentration that leads to all-night coding sessions once engaged
+
+**Strengths**: Demonstrates remarkable productivity in flow state and persistently solves complex bugs  
+**Cautions**: Prone to burnout from over-immersion, tends to skip documentation and code reviews
+
+**Synergy**: Gumiho | **Tension**: Jeoseung Saja
+
+---
+
+### 3. Cheonyeo Gwishin (처녀귀신) - UX Guardian
+*Cheonyeo (처녀) = maiden, Gwishin (귀신) = ghost*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/cheonyeo.webp" alt="Cheonyeo Gwishin" width="150" />
+
+**Character Background**  
+The ghost of a maiden who died unmarried, representing obsession with unfinished business and pursuit of perfection. Symbolizes extreme sensitivity to details.
+
+**Work Style**  
+An embodiment of detail obsessed with user experience
+
+**Strengths**: Uncannily identifies user pain points and excels at interaction details  
+**Cautions**: Development schedules may slip due to pixel-level obsession, spending more time polishing UI than implementing features
+
+**Synergy**: Haetae | **Tension**: Gatssn Kiro
+
+---
+
+### 4. Dokkaebi (도깨비) - Experiment Pioneer
+*Dokkaebi (도깨비) = Korean goblin/trickster spirit*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/dokkaebi.webp" alt="Dokkaebi" width="150" />
+
+**Character Background**  
+A traditional Korean goblin known for mischievous and unpredictable behavior, representing a tendency to try new things and enjoy change. Symbolizes innovation and experimental spirit.
+
+**Work Style**  
+An early adopter developer who tries any new technology
+
+**Strengths**: Quickly grasps new tech trends and demonstrates creative problem-solving unconstrained by conventional methods  
+**Cautions**: Risk of introducing unverified technologies to production, may neglect existing project maintenance while absorbed in new tech
+
+**Synergy**: Mulgwishin | **Tension**: Haetae
+
+---
+
+### 5. Gumiho (구미호) - Automation Wizard
+*Gumiho (구미호) = nine-tailed fox*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/gumiho.webp" alt="Gumiho" width="150" />
+
+**Character Background**  
+A nine-tailed fox spirit that freely uses transformation and magic. Symbolizes the ability to magically automate complex tasks.
+
+**Work Style**  
+A script enthusiast who can't tolerate repetitive tasks
+
+**Strengths**: Boosts team productivity by automating repetitive work, excels at building CI/CD pipelines  
+**Cautions**: May forget original tasks while absorbed in automation itself, spending 5 hours automating a 5-minute task
+
+**Synergy**: Chonggak Gwishin | **Tension**: Jangseung
+
+---
+
+### 6. Haetae (해태) - Quality Guardian
+*Haetae (해태) = mythical lion-like creature that guards justice*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/haetae.webp" alt="Haetae" width="150" />
+
+**Character Background**  
+A mythical creature that guards justice and truth, distinguishing good from evil and defeating injustice. Symbolizes the ability to maintain code quality and detect bugs.
+
+**Work Style**  
+A quality guardian running toward 100% test coverage
+
+**Strengths**: Prevents post-deployment failures through meticulous testing, accurately identifies potential bugs in code reviews  
+**Cautions**: May invest excessive time in test writing, slow down team velocity with "no merge without tests" policy
+
+**Synergy**: Cheonyeo Gwishin | **Tension**: Dokkaebi
+
+---
+
+### 7. Jangseung (장승) - Governance Gatekeeper
+*Jangseung (장승) = traditional Korean totem pole guardian*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/jangseung.webp" alt="Jangseung" width="150" />
+
+**Character Background**  
+A wooden totem pole erected at village entrances to protect the village and mark boundaries. Symbolizes a guardian who maintains rules and boundaries.
+
+**Work Style**  
+The team's pillar who upholds code conventions and processes
+
+**Strengths**: Maintains team code quality through consistent coding conventions, systematically operates PR review processes  
+**Cautions**: May lack flexibility due to excessive adherence to rules, potential friction with team members over "doesn't match conventions"
+
+**Synergy**: Dalgyal Gwishin | **Tension**: Gumiho
+
+---
+
+### 8. Jeoseung Saja (저승사자) - Debt Liquidator
+*Jeoseung (저승) = afterlife, Saja (사자) = messenger/reaper*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/jeoseung.webp" alt="Jeoseung Saja" width="150" />
+
+**Character Background**  
+A grim reaper who guides souls of the dead to the afterlife, responsible for settling unfinished business. Symbolizes the ability to clean up legacy code and resolve technical debt.
+
+**Work Style**  
+A refactoring specialist who persistently hunts down and eliminates technical debt
+
+**Strengths**: Accurately identifies improvement points in legacy code, increases system stability through gradual refactoring  
+**Cautions**: New feature development may be delayed due to absorption in refactoring, may say "this code needs rewriting" too often
+
+**Synergy**: Gatssn Kiro | **Tension**: Chonggak Gwishin
+
+---
+
+### 9. Mulgwishin (물귀신) - Connection Facilitator
+*Mul (물) = water, Gwishin (귀신) = ghost*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/mulgwisin.webp" alt="Mulgwishin" width="150" />
+
+**Character Background**  
+The ghost of someone who drowned, legendary for trying to pull others into the water. Symbolizes the ability to connect and integrate people and systems.
+
+**Work Style**  
+A collaboration master who connects people and systems
+
+**Strengths**: Facilitates smooth inter-team communication, excels at integrating different systems  
+**Cautions**: Development time may become insufficient from attending all meetings, personal tasks may pile up from taking on other teams' work
+
+**Synergy**: Dokkaebi | **Tension**: Dalgyal Gwishin
+
+---
+
+### 10. Dalgyal Gwishin (달걀귀신) - Abstraction Artisan
+*Dalgyal (달걀) = egg, Gwishin (귀신) = ghost*
+
+<img src="https://images.yanbert.com/yanlog/images/kiro-friends-introduction-20260217/dalgyal.webp" alt="Dalgyal Gwishin" width="150" />
+
+**Character Background**  
+The ghost of a child who died before birth, representing an incomplete, unformed state. Symbolizes the ability to simplify complexity and leave only essence.
+
+**Work Style**  
+Minimalist developer who simplifies complexity and leaves only essence
+
+**Strengths**: Excellent ability to extract core patterns from complex systems, boosts entire team productivity with clean interface and API design, maximizes maintainability by boldly removing unnecessary code  
+**Cautions**: May create code difficult to understand through excessive abstraction, "this can be made simpler" may repeat endlessly, may spend more time on abstract design than concrete implementation
+
+**Synergy**: Jangseung | **Tension**: Mulgwishin
+
+## Future Plans
+I routinely added basic logging to track service traffic and conversion performance, connecting it to Amplitude. After sharing in Kiro-related community channels, I plan to monitor the results, though I have no experience or know-how with viral services, so I have no sense of expectations and don't have high hopes. However, it was an enjoyable experience to gauge the design and development capabilities of Kiro + Claude Opus 4.6 model and work with these adorable characters.
+
+[👻 Discover Your Kiro Friends Character](http://kiro-friends.yanbert.com)

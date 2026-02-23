@@ -1,0 +1,38 @@
+---
+title: "Why Kiro is Great for Enterprise (IAM Identity Center)"
+date: "2026-02-11"
+description: "If your company already uses AWS, one of the biggest advantages of adopting Kiro is simplified budgeting and operations."
+tags: ["kiro", "aws", "enterprise", "iam-identity-center"]
+locale: "en"
+slug: "dear-team-lead-lets-adopt-kiro-20260211"
+draft: false
+questions:
+  - text: "Why is AI coding tool adoption delayed?"
+    anchor: "ai-tool-delay"
+  - text: "How to propose to your team lead?"
+    anchor: "proposal"
+---
+
+When individuals decide which software to use, most people typically start with Google research, narrow down candidates through recommendations from peers, and reviews from developer communities. Among the final candidates, they comprehensively evaluate features, performance, ongoing maintenance, security, and reasonable pricing before making a decision. Enterprises go through a similar process when adopting software, but there's one significant difference: budget and expense processing.
+
+While essential for business operations, nobody enjoys budget-related work in their corporate life. In typical companies, the available budget for the year is finalized at the end of the previous year with business planning. There's a process of discussing next year's plans, goals, and required budget with the planning and finance teams. If you've never heard of this process, or even if you have but don't understand the effort required to secure a budget, please know that your team lead or someone higher up is doing this work for you.
+
+AI tools are flooding the market. For developers especially, AI coding tools like Claude Code, Codex, and Cursor have become essential beyond just being trendy. However, each company's support for these AI coding tools varies widely. Some purchase team accounts, others reimburse individual purchases, some allow personal tool choices within a budget, and some offer no company support at all, requiring individuals to pay out of pocket. (Some places even prohibit personal purchases due to security concerns.)
+
+Team members at companies without AI coding tool support, or where it's delayed, might feel frustrated thinking the company isn't keeping up with developer welfare or tech trends. But the real issue might be budget and expense processing. <span id="ai-tool-delay"></span>If new expenses need to be incurred or existing budget plans need to change from this year's already allocated budget, unfortunately, while not as much effort as the initial business planning process, it still requires coordination and negotiation with relevant departments and stakeholders. Again, if you're not doing this, your leader—the person responsible for adopting AI coding tools—has to handle it. Even after overcoming these challenges and securing a new budget for AI coding tools, managing individual team members' expenses without misuse is also the manager's responsibility. Your team lead, who has no doubt about the effectiveness of AI coding tools, might be hesitating and delaying the adoption decision due to these practical concerns.
+
+If your company uses AWS, consider proposing Kiro adoption to your team lead. <span id="proposal"></span>Here's why:
+
+(Copy-paste for your team lead)
+- Kiro is an AI coding tool provided by AWS, supporting both a VS Code-based IDE and a CLI version like Claude Code.
+- Through [spec-driven development](https://kiro.dev/blog/kiro-and-the-future-of-software-development), you can iteratively go through requirements definition/changes -> design -> task breakdown -> coding and documentation, supporting consistent development even in production-level projects.
+- [Account management can be handled through AWS IAM Identity Center](https://kiro.dev/docs/enterprise/iam/), with fine-grained controls like overage management when credits (allowed tokens) are exhausted.
+- Costs are included in existing AWS Billing, so while additional budget is needed, you could discuss with the SRE team or CTO who manages development costs.
+- Kiro costs can be offset with AWS Credits, so through [credit support programs](https://kiro.dev/blog/one-year-free-for-startups-2025) or discussions with AWS Account Managers or MMP Managers, you might be able to try it without additional costs.
+
+Without AWS credit support, there are additional costs and budget discussions are still needed, which might seem like the same thing, but:
+- Negotiating with Business Planning/Finance vs. CTO/SRE team
+- New/changed budget approval vs. adding to existing development costs
+- Relying on individual discretion and goodwill after tool support vs. governance like management and security
+
+From a team lead's perspective, these differences can be significant. At least they are for me. If your organization hasn't adopted AI coding tools yet, try proposing with these points.

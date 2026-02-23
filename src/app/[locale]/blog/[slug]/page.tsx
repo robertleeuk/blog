@@ -8,6 +8,7 @@ import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 import QuestionTags from '@/components/QuestionTags';
+import PostEngagementTracker from '@/components/PostEngagementTracker';
 
 interface PostPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -89,7 +90,13 @@ export default async function PostPage({ params }: PostPageProps) {
           </header>
           
           {/* 본문 */}
-          <MarkdownRenderer content={post.content} />
+          <MarkdownRenderer content={post.content} postSlug={slug} />
+          
+          {/* 참여 추적 */}
+          <PostEngagementTracker
+            postSlug={slug}
+            contentCategory={post.frontmatter.tags?.[0] || 'uncategorized'}
+          />
           
           {/* 하단 네비게이션 */}
           <div className="mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800">

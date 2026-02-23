@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# RSS feeds (generated during build)
+public/*/rss.xml
+public/*/tag/*/rss.xml
