@@ -260,7 +260,9 @@ class FeedBuilder {
       const outputPath = path.join(this.outputDir, locale, 'rss.xml');
       this.ensureDirectoryExists(path.dirname(outputPath));
       
-      fs.writeFileSync(outputPath, rssXml, 'utf-8');
+      // UTF-8 BOM 추가하여 저장 (크롬 호환성)
+      const bom = '\uFEFF';
+      fs.writeFileSync(outputPath, bom + rssXml, 'utf-8');
       console.log(`   ✅ Generated: ${outputPath}`);
       
     } catch (error) {
@@ -408,7 +410,9 @@ class FeedBuilder {
       const outputPath = path.join(this.outputDir, locale, 'tag', tag, 'rss.xml');
       this.ensureDirectoryExists(path.dirname(outputPath));
       
-      fs.writeFileSync(outputPath, rssXml, 'utf-8');
+      // UTF-8 BOM 추가하여 저장 (크롬 호환성)
+      const bom = '\uFEFF';
+      fs.writeFileSync(outputPath, bom + rssXml, 'utf-8');
       console.log(`   ✅ Generated: ${outputPath}`);
       
     } catch (error) {
