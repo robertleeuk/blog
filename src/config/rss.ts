@@ -14,8 +14,8 @@
  * @property language - RSS 피드 언어 코드
  */
 export const RSS_CONFIG = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://yanlog.yanbert.com',
-  siteName: "YANSO's Blog",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://robert.yanbert.com',
+  siteName: "ROBERT LEE's Blog",
   siteDescription: '개인 기술 블로그',
   maxItems: 20,
   language: 'ko',

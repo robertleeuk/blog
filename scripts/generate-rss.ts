@@ -422,16 +422,16 @@ class FeedBuilder {
  * 환경 변수 로딩 및 검증
  */
 function loadConfig(): FeedBuilderConfig {
-  // NEXT_PUBLIC_BASE_URL 환경 변수 로딩
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yanlog.yanbert.com';
+  // NEXT_PUBLIC_SITE_URL 환경 변수 로딩
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://robert.yanbert.com';
   
-  if (!process.env.NEXT_PUBLIC_BASE_URL) {
-    console.warn('⚠️  NEXT_PUBLIC_BASE_URL is not defined, using default:', baseUrl);
+  if (!process.env.NEXT_PUBLIC_SITE_URL) {
+    console.warn('⚠️  NEXT_PUBLIC_SITE_URL is not defined, using default:', baseUrl);
   }
 
   return {
     baseUrl,
-    siteName: "YAN SO's Blog",
+    siteName: "ROBERT LEE's Blog",
     siteDescription: '개인 기술 블로그',
     maxItems: 20,
   };
